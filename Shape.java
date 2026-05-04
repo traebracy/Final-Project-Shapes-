@@ -1,6 +1,6 @@
-// super-class that defines what every shape needs to fufill through the use of the defined methods. 
+// super-class that defines what every shape needs to fufill through the use of the defined methods.
 
-abstract class Shape { 
+abstract class Shape {
 
     abstract String getName();
 
