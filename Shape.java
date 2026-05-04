@@ -1,8 +1,7 @@
-// super-class "shape" => abstract class
+// Abstract superclass — all shapes inherit from this.
+// Defines the contract every shape must fulfill.
 
 abstract class Shape {
-
-    public abstract String toString();
 
     abstract String getName();
 
@@ -10,14 +9,6 @@ abstract class Shape {
 
     abstract double getPerimeter();
 
-    // this is specifically used in the generic polygon class to get the type of the shape.
-
+    @Override
+    public abstract String toString();
 }
-
-    // Abstract Method
-
-    // Concrete Method
-
-
-    
-
