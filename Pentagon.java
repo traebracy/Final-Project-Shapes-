@@ -1,5 +1,4 @@
-// Subclass of Polygon
-// Inheritance: Shape -> Polygon -> Pentagon
+// subclass of polygon 
 
 public class Pentagon extends Polygon {
 
