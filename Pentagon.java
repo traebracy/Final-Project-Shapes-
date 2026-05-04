@@ -1,4 +1,4 @@
-// subclass of polygon 
+// subclass of polygon
 
 public class Pentagon extends Polygon {
 
