@@ -1,4 +1,5 @@
-// Multilevel inheritance: Shape -> Polygon -> GenericPolygon
+// multileve inheritance, abstract class shape --> polygon --> genericpolygon 
+
 // Catches any polygon that doesn't have its own dedicated class (6+ sides).
 
 public class GenericPolygon extends Polygon {
