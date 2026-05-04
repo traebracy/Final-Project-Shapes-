@@ -1,4 +1,4 @@
-// multilevel inheritance; abstract class shape --> abstract class polygon --> class genericpolygon 
+// multilevel inheritance; abstract class shape --> abstract class polygon --> class generic polygon 
 
 // catches a polygon that doesn't have its own dedicated class (6+ sides).
 
