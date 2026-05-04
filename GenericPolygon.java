@@ -19,7 +19,7 @@ public class GenericPolygon extends Polygon {
             case 6 -> "Hexagon";
             case 7 -> "Heptagon";
             case 8 -> "Octagon";
-            default -> "Polygon with " + sides + " sides";
+            default -> "Polygon with " + sides + " sides"; // if the number of sides is more than 8. 
         };
     }
 
