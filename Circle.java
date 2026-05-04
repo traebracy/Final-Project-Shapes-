@@ -1,4 +1,5 @@
-// subclass of Shape (NOT Polygon)
+// Subclass of Shape (not Polygon — a circle has no sides)
+// Inheritance: Shape -> Circle
 
 public class Circle extends Shape {
 
@@ -9,10 +10,11 @@ public class Circle extends Shape {
     }
 
     @Override
-    String getName() {
+    public String getName() {
         return "Circle";
     }
 
+    @Override
     public double getPerimeter() { // circumference
         return 2 * Math.PI * radius;
     }
@@ -29,7 +31,7 @@ public class Circle extends Shape {
     @Override
     public String toString() {
         return String.format(
-                "Circle [radius=%.2f, diameter=%.2f, perimeter=%.2f, area=%.2f]",
+                "Circle [radius=%.2f, diameter=%.2f, circumference=%.2f, area=%.2f]",
                 radius,
                 getDiameter(),
                 getPerimeter(),
