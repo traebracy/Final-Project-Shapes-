@@ -1,7 +1,6 @@
-// Abstract superclass — all shapes inherit from this.
-// Defines the contract every shape must fulfill.
+// super-class that defines what every shape must fulfill through its methods. 
 
-abstract class Shape {
+abstract class Shape { 
 
     abstract String getName();
 
@@ -10,5 +9,5 @@ abstract class Shape {
     abstract double getPerimeter();
 
     @Override
-    public abstract String toString();
+    public abstract String toString(); // Overrides toString so that each method has the ability to have its own toString for convention. 
 }
