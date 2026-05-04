@@ -1,4 +1,4 @@
-// subclass of polygon 
+// subclass of polygon
 
 
 public class Rectangle extends Polygon {
@@ -39,7 +39,6 @@ public class Rectangle extends Polygon {
         );
     }
 }
-
 
 
 
