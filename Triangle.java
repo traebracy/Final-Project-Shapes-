@@ -1,5 +1,5 @@
-// subclass of Polygon
-// Shape -> Polygon -> Triangle
+// Subclass of Polygon
+// Inheritance: Shape -> Polygon -> Triangle
 
 public class Triangle extends Polygon {
 
@@ -9,7 +9,7 @@ public class Triangle extends Polygon {
     public Triangle(double side1, double side2, double side3,
                     double angle1, double angle2, double angle3) {
 
-        super(3); // triangle always has 3 sides
+        super(3);
 
         this.side1 = side1;
         this.side2 = side2;
@@ -21,45 +21,37 @@ public class Triangle extends Polygon {
     }
 
     public boolean isValidTriangle() {
-        // check triangle inequality
+        // Triangle inequality: each side must be less than the sum of the other two
         if (side1 + side2 <= side3 ||
                 side1 + side3 <= side2 ||
                 side2 + side3 <= side1) {
             return false;
         }
-
-        // check if angles add to 180
+        // All interior angles of a triangle must sum to exactly 180 degrees
         return Math.abs((angle1 + angle2 + angle3) - 180) < 0.001;
     }
 
-    public double getPerimeter() {
-        if (!isValidTriangle()) {
-            return 0;
-        }
-
-        return side1 + side2 + side3;
-    }
-
     @Override
-    String getName() {
+    public String getName() {
         return "Triangle";
     }
 
     @Override
-    double getArea() {
-        if (!isValidTriangle()) {
-            return 0;
-        }
+    public double getPerimeter() {
+        if (!isValidTriangle()) return 0;
+        return side1 + side2 + side3;
+    }
 
-        // Heron's formula
+    @Override
+    public double getArea() {
+        if (!isValidTriangle()) return 0;
+        // Heron's formula: area = sqrt(s*(s-a)*(s-b)*(s-c)) where s = half the perimeter
         double s = getPerimeter() / 2.0;
         return Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
     }
 
     public String getTriangleType() {
-        if (!isValidTriangle()) {
-            return "Invalid triangle";
-        }
+        if (!isValidTriangle()) return "Invalid triangle";
 
         if (angle1 == 90 || angle2 == 90 || angle3 == 90) {
             return "Right triangle";
@@ -72,9 +64,7 @@ public class Triangle extends Polygon {
 
     @Override
     public String toString() {
-        if (!isValidTriangle()) {
-            return "Wrong inputs, not a triangle";
-        }
+        if (!isValidTriangle()) return "Invalid triangle — check your sides and angles.";
 
         return String.format(
                 "Triangle [type=%s, sides=%d, perimeter=%.2f, area=%.2f]",
