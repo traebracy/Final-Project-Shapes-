@@ -1,4 +1,5 @@
-// subclass of polygon 
+// Subclass of Polygon
+// Inheritance: Shape -> Polygon -> Triangle
 
 public class Triangle extends Polygon {
 
@@ -66,7 +67,7 @@ public class Triangle extends Polygon {
         if (!isValidTriangle()) return "Invalid triangle — check your sides and angles.";
 
         return String.format(
-                "Triangle [type=%s, sides=%d, perimeter=%.2f, area=%.2f]",
+                "Triangle: Type: %s, Sides: %d, Perimeter: %.2f, Area: %.2f",
                 getTriangleType(),
                 getSides(),
                 getPerimeter(),
