@@ -9,5 +9,5 @@ abstract class Shape {
     abstract double getPerimeter();
 
     @Override
-    public abstract String toString(); // ovverides toString so that each method has the ability to have its own toString for convention. 
+    public abstract String toString(); // ovverides toString so that each method has the ability to have its own toString. 
 }
