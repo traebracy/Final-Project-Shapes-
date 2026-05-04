@@ -30,7 +30,7 @@ public class Pentagon extends Polygon {
     @Override
     public String toString() {
         return String.format(
-                "Pentagon [sideLength=%.2f, apothem=%.2f, sides=%d, perimeter=%.2f, area=%.2f]",
+                "Pentagon: sideLength: %.2f, Apothem: %.2f, Sides: %d, Perimeter: %.2f, Area: %.2f",
                 sideLength,
                 apothem,
                 getSides(),
