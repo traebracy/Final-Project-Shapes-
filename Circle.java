@@ -1,4 +1,6 @@
-// subclass of shape, this is because it is the only geometric shape that is not a polygon
+// subclass of shape, 
+
+// it is the only geometric shape that is not a polygon, which is why it inherits from shape and also why shape is the super class of polygon despite them both being abstract classes.
 
 public class Circle extends Shape {
 
