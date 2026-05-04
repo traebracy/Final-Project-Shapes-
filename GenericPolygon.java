@@ -5,7 +5,7 @@
 public class GenericPolygon extends Polygon {
 
     private double sideLength;
-    private double apothem; // perpendicular distance from center to middle of any side
+    private double apothem; 
 
     public GenericPolygon(int sides, double sideLength, double apothem) {
         super(sides);
