@@ -1,11 +1,11 @@
-// multilevel inheritance; abstract class shape --> abstract class polygon --> class generic polygon 
+// multilevel inheritance; abstract class shape --> abstract class polygon --> class generic polygon
 
 // catches a polygon that doesn't have its own dedicated class (6+ sides).
 
 public class GenericPolygon extends Polygon {
 
     private double sideLength;
-    private double apothem; 
+    private double apothem;
 
     public GenericPolygon(int sides, double sideLength, double apothem) {
         super(sides);
@@ -37,7 +37,7 @@ public class GenericPolygon extends Polygon {
     @Override
     public String toString() {
         return String.format(
-                "%s [sideLength=%.2f, apothem=%.2f, sides=%d, perimeter=%.2f, area=%.2f]",
+                "%s, sideLength: %.2f, Apothem: %.2f, Sides: %d, Perimeter: %.2f, Area: %.2f]",
                 getName(),
                 sideLength,
                 apothem,
