@@ -1,4 +1,4 @@
-// super-class that defines what every shape must fulfill through its methods. 
+// super-class that defines what every shape needs to fufill through the use of the defined methods. 
 
 abstract class Shape { 
 
@@ -9,5 +9,5 @@ abstract class Shape {
     abstract double getPerimeter();
 
     @Override
-    public abstract String toString(); // Overrides toString so that each method has the ability to have its own toString for convention. 
+    public abstract String toString(); // ovverides toString so that each method has the ability to have its own toString for convention. 
 }
