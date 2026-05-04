@@ -32,7 +32,7 @@ public class Circle extends Shape {
     @Override
     public String toString() {
         return String.format(
-                "Circle [radius=%.2f, diameter=%.2f, circumference=%.2f, area=%.2f]",
+                "Circle: Radius: %.2f, Diameter: %.2f, Circumference: %.2f, Area: %.2f]",
                 radius,
                 getDiameter(),
                 getPerimeter(),
