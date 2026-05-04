@@ -30,7 +30,7 @@ public class Rectangle extends Polygon {
     @Override
     public String toString() {
         return String.format(
-                "Rectangle [length=%.2f, width=%.2f, sides=%d, perimeter=%.2f, area=%.2f]",
+                "Rectangle: Length: %.2f, Width: %.2f, Sides: %d, Perimeter: %.2f, Area: %.2f]",
                 length,
                 width,
                 getSides(),
