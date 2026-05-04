@@ -1,6 +1,6 @@
-// single inheritance; abstract class shape --> class polygon 
+// single inheritance; abstract class shape --> class polygon
 
-// abstract class shape --> abstract class polygon, allows for a hierarchy of shared behavior. 
+// abstract class shape --> abstract class polygon, allows for a hierarchy of shared behavior.
 
 abstract class Polygon extends Shape {
 
