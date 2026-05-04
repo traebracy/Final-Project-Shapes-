@@ -1,5 +1,5 @@
-// Subclass of Polygon
-// Inheritance: Shape -> Polygon -> Rectangle
+// subclass of polygon 
+
 
 public class Rectangle extends Polygon {
 
