@@ -8,10 +8,10 @@ import javafx.stage.Stage;
 
 public class ShapeVisualizer extends Application {
 
-    // The shape passed in from Main
+    // the shape that is pass in through main
     private static Shape shapeToDisplay;
 
-    public static void drawShape(Shape shape) {
+    public static void drawShape(Shape shape) { // ex, ShapeVisualizer.drawShape(myCircle);
         shapeToDisplay = shape;
         launch();
     }
@@ -22,11 +22,12 @@ public class ShapeVisualizer extends Application {
         Canvas canvas = new Canvas(600, 600);
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
-        // Background
+        // the background
         gc.setFill(Color.web("#1e1e2e"));
         gc.fillRect(0, 0, 600, 600);
 
-        // Draw the correct shape
+
+        // sequence that makes you draw the correct shape
         if (shapeToDisplay instanceof Circle c) {
             drawCircle(gc, c);
         } else if (shapeToDisplay instanceof Triangle t) {
@@ -39,7 +40,8 @@ public class ShapeVisualizer extends Application {
             drawPolygonShape(gc, gp.getSides());
         }
 
-        // Draw shape info text at the bottom
+        // the info of the shape that's been created through its entered arguments
+
         gc.setFill(Color.WHITE);
         gc.setFont(javafx.scene.text.Font.font("Arial", 14));
         gc.fillText(shapeToDisplay.toString(), 20, 570);
@@ -47,7 +49,7 @@ public class ShapeVisualizer extends Application {
         StackPane root = new StackPane(canvas);
         Scene scene = new Scene(root, 600, 600);
 
-        stage.setTitle("Shape Visualizer — " + shapeToDisplay.getName());
+        stage.setTitle("Shape Visualizer " + shapeToDisplay.getName());
         stage.setScene(scene);
         stage.show();
     }
@@ -67,7 +69,9 @@ public class ShapeVisualizer extends Application {
     }
 
     private void drawRectangle(GraphicsContext gc, Rectangle rect) {
+
         // Use reflection-free approach — just draw a rectangle scaled to fit
+
         double maxW = 400, maxH = 300;
         double drawW = maxW;
         double drawH = maxH;
