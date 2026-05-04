@@ -1,43 +1,48 @@
-// multilevel inheritance
-
-// shape -> polygon -> generic-polygon
+// Multilevel inheritance: Shape -> Polygon -> GenericPolygon
+// Catches any polygon that doesn't have its own dedicated class (6+ sides).
 
 public class GenericPolygon extends Polygon {
 
-    // this is the generic polygon so no shape actually extends it.
+    private double sideLength;
+    private double apothem; // perpendicular distance from center to middle of any side
 
-    // this class exists to account for shapes that don't extend the polygon class but are still polygons.
-
-    GenericPolygon(int sides) {
+    public GenericPolygon(int sides, double sideLength, double apothem) {
         super(sides);
+        this.sideLength = sideLength;
+        this.apothem = apothem;
     }
 
     @Override
-    public String toString() {
-        return "";
-    }
-
-    @Override
-    String getName() {
+    public String getName() {
         return switch (sides) {
-
             case 6 -> "Hexagon";
             case 7 -> "Heptagon";
             case 8 -> "Octagon";
-            default -> "Polygon w/" + " " + sides + " " + "sides";
-
+            default -> "Polygon with " + sides + " sides";
         };
     }
 
     @Override
-    double getArea() {
-        return 0;
+    public double getPerimeter() {
+        return sides * sideLength;
     }
 
     @Override
-    double getPerimeter() {
-        return 0;
+    public double getArea() {
+        // Area of a regular polygon: (perimeter * apothem) / 2
+        return 0.5 * getPerimeter() * apothem;
+    }
+
+    @Override
+    public String toString() {
+        return String.format(
+                "%s [sideLength=%.2f, apothem=%.2f, sides=%d, perimeter=%.2f, area=%.2f]",
+                getName(),
+                sideLength,
+                apothem,
+                getSides(),
+                getPerimeter(),
+                getArea()
+        );
     }
 }
-
-
