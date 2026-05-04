@@ -1,5 +1,4 @@
-// Subclass of Polygon
-// Inheritance: Shape -> Polygon -> Triangle
+// subclass of polygon 
 
 public class Triangle extends Polygon {
 
