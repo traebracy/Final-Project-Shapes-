@@ -1,10 +1,10 @@
-// single inheritance
-
-// shape -> polygon
+// Single inheritance: Shape -> Polygon
+// Abstract — concrete polygon shapes extend this.
 
 abstract class Polygon extends Shape {
 
-    protected int sides; // unlike private and public accessor methods, protected gives you access to the same class, same package, subclass, but not everywhere.
+    // protected so subclasses can read sides directly (e.g. GenericPolygon's getName switch)
+    protected int sides;
 
     public Polygon(int sides) {
         if (sides >= 3) {
@@ -14,13 +14,7 @@ abstract class Polygon extends Shape {
         }
     }
 
-    public int getSides(){
+    public int getSides() {
         return sides;
     }
-
-    public boolean isValidPolygon(){
-        return sides >= 3;
-    }
-
 }
-
