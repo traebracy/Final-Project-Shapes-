@@ -1,5 +1,4 @@
-// Subclass of Shape (not Polygon — a circle has no sides)
-// Inheritance: Shape -> Circle
+// subclass of shape, this is because it is the only geometric shape that is not a polygon
 
 public class Circle extends Shape {
 
